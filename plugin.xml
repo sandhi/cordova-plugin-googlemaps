@@ -299,6 +299,8 @@ The native map view is faster, use less network usage, display 3D views, and eve
         <resource-file src="src/android/res/values-da/pgm_strings.xml" target="res/values-da/pgm_strings.xml" />
         <!-- localized messages for Vietnamese -->
         <resource-file src="src/android/res/values-vi/pgm_strings.xml" target="res/values-vi/pgm_strings.xml" />
+
+        <dependency id="es6-promise-plugin" version="4.1.0" />
     </platform>
 
     <!-- ios -->
