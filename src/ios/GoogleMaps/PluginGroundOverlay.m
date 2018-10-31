@@ -84,6 +84,7 @@
         NSString *groundOverlayId = [NSString stringWithFormat:@"groundoverlay_%@", idBase];
         [self.mapCtrl.objects setObject:groundOverlay forKey: groundOverlayId];
         groundOverlay.title = groundOverlayId;
+        groundOverlay.anchor = CGPointMake(0.5f, 0.5f);
 
         if ([json valueForKey:@"zIndex"]) {
             groundOverlay.zIndex = [[json valueForKey:@"zIndex"] floatValue];
@@ -91,6 +92,10 @@
 
         if ([json valueForKey:@"bearing"]) {
             groundOverlay.bearing = [[json valueForKey:@"bearing"] floatValue];
+        }
+        if ([json valueForKey:@"anchor"]) {
+            NSArray *anchor = [json valueForKey:@"anchor"];
+            groundOverlay.anchor = CGPointMake([[anchor objectAtIndex:0] floatValue], [[anchor objectAtIndex:1] floatValue]);
         }
 
         BOOL isVisible = YES;
@@ -530,14 +535,42 @@
 {
   [self.mapCtrl.executeQueue addOperationWithBlock:^{
 
+    NSString *iconPath = url.absoluteString;
+
+    if ([iconPath hasPrefix:@"file://"]) {
+      iconPath = [iconPath stringByReplacingOccurrencesOfString:@"file://" withString:@""];
+      if (![iconPath hasPrefix:@"/"]) {
+        iconPath = [NSString stringWithFormat:@"/%@", iconPath];
+      }
+      NSFileManager *fileManager = [NSFileManager defaultManager];
+      if (![fileManager fileExistsAtPath:iconPath]) {
+        //if (self.mapCtrl.debuggable) {
+        NSLog(@"(error)There is no file at '%@'.", iconPath);
+        //}
+        //[self.commandDelegate sendPluginResult:pluginResult callbackId:callbackId];
+        completionBlock(NO, nil);
+        return;
+      }
+
+      UIImage *image = [UIImage imageNamed:iconPath];
+      if (image) {
+        completionBlock(YES, image);
+        return;
+      }
+    }
+
+
+
     NSURLRequest *req = [NSURLRequest requestWithURL:url
                                          cachePolicy:NSURLRequestReturnCacheDataElseLoad
                                      timeoutInterval:5];
     NSCachedURLResponse *cachedResponse = [[NSURLCache sharedURLCache] cachedResponseForRequest:req];
     if (cachedResponse != nil) {
       UIImage *image = [[UIImage alloc] initWithData:cachedResponse.data];
-      completionBlock(YES, image);
-      return;
+      if (image) {
+        completionBlock(YES, image);
+        return;
+      }
     }
 
 
@@ -561,23 +594,6 @@
 
                                                }];
     [getTask resume];
-    //-------------------------------------------------------------
-    // NSURLConnection sendAsynchronousRequest is deprecated.
-    //-------------------------------------------------------------
-    /*
-     [NSURLConnection sendAsynchronousRequest:req
-     queue:self.mapCtrl.executeQueue
-     completionHandler:^(NSURLResponse *res, NSData *data, NSError *error) {
-     if ( !error ) {
-     [self.icons setObject:data forKey:uniqueKey cost:data.length];
-     UIImage *image = [UIImage imageWithData:data];
-     completionBlock(YES, image);
-     } else {
-     completionBlock(NO, nil);
-     }
-
-     }];
-     */
 
 
   }];

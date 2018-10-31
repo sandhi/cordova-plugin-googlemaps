@@ -1,4 +1,5 @@
-var utils = require('cordova/utils'),
+
+ var utils = require('cordova/utils'),
   event = require('./event'),
   common = require('./Common'),
   BaseClass = require('./BaseClass');
@@ -82,6 +83,7 @@ var HTMLInfoWindow = function () {
   var contentBox = document.createElement("div");
   contentBox.style.display = "inline-block";
   contentBox.style.padding = "5px";
+  contentBox.style.boxSizing = "content-box";
   contentBox.classList.add('pgm-html-info-content-box');
 
   var contentFrame = document.createElement("div");
@@ -92,6 +94,7 @@ var HTMLInfoWindow = function () {
   contentFrame.style.left = "0px";
   contentFrame.style.right = "0px";
   contentFrame.style.zIndex = "1"; // In order to set higher depth than the map div certainly
+  contentFrame.style.overflow = "hidden";
   contentFrame.classList.add('pgm-html-info-content-frame');
   frame.appendChild(contentFrame);
   contentFrame.appendChild(contentBox);
@@ -203,6 +206,8 @@ var HTMLInfoWindow = function () {
     var contentBox = contentFrame.firstChild;
     contentBox.style.minHeight = "50px";
     contentBox.style.width = "auto";
+    contentBox.style.height = "auto";
+    contentBox.style.padding = "5px";
 
     var content = self.get("content");
     if (typeof content === "string") {
@@ -243,6 +248,9 @@ var HTMLInfoWindow = function () {
     if (contentBox.offsetWidth > div.offsetWidth * 0.9) {
       contentBox.style.width = (div.offsetWidth * 0.9) + "px";
     }
+    contentBox.style.width = "100%";
+    contentBox.style.height = "100%";
+    contentBox.style.padding = "5px 17px 17px 5px";
     self.set("contentsWidth", contentsWidth);
 
     var infoOffset = {
@@ -336,6 +344,7 @@ var HTMLInfoWindow = function () {
   };
 
   self._hook.on(self, "infoPosition_changed", function (ignore, point) {
+    if (!point) return;
     var x = point.x + self.get("offsetX");
     var y = point.y + self.get("offsetY");
     anchorDiv.style['-webkit-transform'] = "translate3d(" + x + "px, " + y + "px, 0px)";

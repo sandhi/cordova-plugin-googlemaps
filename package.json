@@ -1,17 +1,14 @@
 {
   "name": "cordova-plugin-googlemaps",
-  "version": "2.3.8",
-  "description": "Google Maps native SDK for Android and iOS",
+  "version": "2.4.6",
+  "description": "Google Maps native SDK for Android and iOS, and Google Maps JavaScript API v3 for browser.",
   "cordova": {
     "id": "cordova-plugin-googlemaps",
     "platforms": [
       "android",
-      "ios"
+      "ios",
+      "browser"
     ]
-  },
-  "dependencies": {
-    "xml2js": "~0.4.19",
-    "minimist": "~1.2.0"
   },
   "repository": {
     "type": "git",

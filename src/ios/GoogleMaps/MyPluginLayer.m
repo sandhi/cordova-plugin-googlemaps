@@ -20,6 +20,7 @@
 - (id)initWithWebView:(UIView *)webView {
     self.executeQueue = [NSOperationQueue new];
     self._lockObject = [[NSObject alloc] init];
+    self.CACHE_FIND_DOM = [NSMutableDictionary dictionary];
 
     self = [super initWithFrame:[webView frame]];
     self.webView = webView;
@@ -168,6 +169,11 @@
       // Hold the mapCtrl instance with mapId.
       [self.pluginScrollView.mapCtrls setObject:pluginViewCtrl forKey:pluginViewCtrl.overlayId];
 
+      //When showing this plugin multiple times, a UIView from other plugin might be overlayed on
+      //top of this plugin so we must switch the view with the view that is right before the webview 
+      //and update the background color for the webview to prevent issues with non transparent webview
+      [self exchangeSubviewAtIndex:[self.subviews indexOfObject:self.webView]-1 withSubviewAtIndex:[self.subviews indexOfObject:self.pluginScrollView]];
+      self.webView.backgroundColor = [UIColor clearColor];
 
       // Add the mapView under the scroll view.
       [pluginViewCtrl.view setTag:pluginViewCtrl.viewDepth];
@@ -323,11 +329,14 @@
   CGPoint browserClickPoint = CGPointMake(point.x - self.webView.frame.origin.x, point.y - self.webView.frame.origin.y);
   //NSLog(@"-->zoomScale = %f", self.webView.scrollView.zoomScale);
 
+  [self.CACHE_FIND_DOM removeAllObjects];
 
   // Check other views of other plugins before this plugin
   // e.g. PhoneGap-Plugin-ListPicker, etc
   UIView *subview;
   NSArray *subviews = [self.webView.superview subviews];
+  CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
+  CGPoint subviewPoint = CGPointMake(browserClickPoint.x, browserClickPoint.y - statusBarFrame.size.height);
   for (int i = ((int)[subviews count] - 1); i >= 0; i--) {
     subview = [subviews objectAtIndex: i];
     //NSLog(@"--->subview[%d] = %@", i, subview);
@@ -340,7 +349,7 @@
       continue;
     }
 
-    UIView *hit = [subview hitTest:point withEvent:event];
+    UIView *hit = [subview hitTest:subviewPoint withEvent:event];
 
     if (hit) {
       if (subview == self.webView) {
@@ -377,6 +386,7 @@
   NSDictionary *domInfo;
 
   @synchronized(self.pluginScrollView.HTMLNodes) {
+    //NSLog(@"--->browserClickPoint = %f, %f", browserClickPoint.x, browserClickPoint.y);
     clickedDomId = [self findClickedDom:@"root" withPoint:browserClickPoint isMapChild:NO overflow:nil];
 
     while(mapId = [mapIDs nextObject]) {
@@ -429,7 +439,11 @@
 
 - (NSString *)findClickedDom:(NSString *)domId withPoint:(CGPoint)clickPoint isMapChild:(BOOL)isMapChild overflow:(OverflowCSS *)overflow {
 
+  if ([self.CACHE_FIND_DOM objectForKey:domId]) {
+    return [self.CACHE_FIND_DOM objectForKey:domId];
+  }
   NSDictionary *domInfo = [self.pluginScrollView.HTMLNodes objectForKey:domId];
+  NSDictionary *domInfoChild;
   NSArray *children = [domInfo objectForKey:@"children"];
   NSString *maxDomId = nil;
   CGRect rect;
@@ -481,7 +495,7 @@
           rect = CGRectFromString([domInfo objectForKey:@"size"]);
           right = rect.origin.x + rect.size.width;
           bottom = rect.origin.y + rect.size.height;
-          if (overflow != nil) {
+          if (overflow != nil && ![@"root" isEqualToString:domId ]) {
             if (overflow.cropX) {
               rect.origin.x = MAX(rect.origin.x, overflow.rect.origin.x);
               right = MIN(right, overflow.rect.origin.x + overflow.rect.size.width);
@@ -512,18 +526,18 @@
           }
           grandChildId = [self findClickedDom:childId withPoint:clickPoint isMapChild: isMapChild overflow:overflow];
           if (grandChildId == nil) {
-            domInfo = [self.pluginScrollView.HTMLNodes objectForKey:grandChildId];
+            domInfoChild = [self.pluginScrollView.HTMLNodes objectForKey:grandChildId];
             grandChildId = childId;
           } else {
-            domInfo = [self.pluginScrollView.HTMLNodes objectForKey:grandChildId];
+            domInfoChild = [self.pluginScrollView.HTMLNodes objectForKey:grandChildId];
             zIndexProp = [domInfo objectForKey:@"zIndex"];
             zIndexValue = [[zIndexProp objectForKey:@"z"] intValue];
           }
-          rect = CGRectFromString([domInfo objectForKey:@"size"]);
+          rect = CGRectFromString([domInfoChild objectForKey:@"size"]);
 
           right = rect.origin.x + rect.size.width;
           bottom = rect.origin.y + rect.size.height;
-          if (overflow != nil) {
+          if (overflow != nil && ![@"root" isEqualToString:domId ]) {
             if (overflow.cropX) {
               rect.origin.x = MAX(rect.origin.x, overflow.rect.origin.x);
               right = MIN(right, overflow.rect.origin.x + overflow.rect.size.width);
@@ -554,8 +568,9 @@
     }
   }
 
-  if (maxDomId == nil) {
+  if (maxDomId == nil && ![@"root" isEqualToString:domId]) {
     if ([@"none" isEqualToString:pointerEvents]) {
+      [self.CACHE_FIND_DOM setValue:nil forKey:domId];
       return nil;
     }
     domInfo = [self.pluginScrollView.HTMLNodes objectForKey:domId];
@@ -578,10 +593,12 @@
         clickPoint.y < rect.origin.y ||
         clickPoint.x > right ||
         clickPoint.y > bottom) {
+      [self.CACHE_FIND_DOM setValue:nil forKey:domId];
       return nil;
     }
     maxDomId = domId;
   }
+  [self.CACHE_FIND_DOM setValue:maxDomId forKey:domId];
   return maxDomId;
 }
 
