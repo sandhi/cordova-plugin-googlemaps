@@ -434,7 +434,7 @@ public class MyPluginLayout extends FrameLayout implements ViewTreeObserver.OnSc
       Bundle domInfo = HTMLNodes.get(domId);
       Bundle zIndexProp;
       int containMapCnt = 0;
-      if (domInfo.containsKey("containMapIDs")) {
+      if (domInfo != null && domInfo.containsKey("containMapIDs")) {
         Set<String> keys = domInfo.getBundle("containMapIDs").keySet();
         if (keys != null) {
           containMapCnt = keys.size();
