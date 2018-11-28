@@ -652,7 +652,7 @@ public class MyPluginLayout extends FrameLayout implements ViewTreeObserver.OnSc
             continue;
           }
 
-          if (pluginOverlay.getDivId().equals(clickedDomId)) {
+          if (clickedDomId != null && pluginOverlay.getDivId().equals(clickedDomId)) {
             return true;
           }
 
