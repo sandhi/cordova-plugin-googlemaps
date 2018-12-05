@@ -1,0 +1,518 @@
+[33mcommit 39f8a87e422867f945c9e39fdd258ba3ba709555[m
+Author: sandhi <sandhi.yz@gmail.com>
+Date:   Wed Nov 28 14:42:52 2018 +0700
+
+    Fix NullPointerException
+
+[33mcommit 4c2c29e7415f0c148784d5fe3447dac4bdf92b72[m
+Author: sandhi <sandhi.yz@gmail.com>
+Date:   Mon Nov 12 09:01:15 2018 +0700
+
+    fix NullPointerException
+
+[33mcommit 4d371e116acaa879f03a8645717c95d9c2f53a61[m
+Author: sandhi <sandhi.yz@gmail.com>
+Date:   Wed Oct 31 15:42:02 2018 +0700
+
+    add es6-promise-plugin
+
+[33mcommit 978606465c445d7e7b4173105c3c3b187ef4dce5[m
+Merge: d63b433 4b58110
+Author: sandhi <sandhi.yz@gmail.com>
+Date:   Wed Oct 31 15:30:52 2018 +0700
+
+    update from upstream
+
+[33mcommit 4b58110e37ef24aebea1a6b00049c3f8e46e4f6f[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Wed Oct 24 07:48:20 2018 -0700
+
+    Update private-support.md
+
+[33mcommit 524d46a1a1b43408e26b0d5d30001e72a8358d68[m
+Merge: 278e412 ccd6711
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Fri Oct 19 23:44:22 2018 -0700
+
+    Merge pull request #2469 from supa-creation/master
+    
+    Fix crash for POI click with line break in name
+
+[33mcommit 278e412c25b76f4909510f4a9d547c908eec193f[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Fri Oct 19 20:06:45 2018 -0700
+
+    Update README.md
+
+[33mcommit 9f005a04e0eb46039a84c1757816ad45d2657ec2[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Wed Oct 17 17:45:47 2018 -0700
+
+    Update and rename CONTRIBUTING.md to pull_request_template.md
+
+[33mcommit 2c76e20f3e04416907c3f9981458afc52ac514cc[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Wed Oct 17 17:43:43 2018 -0700
+
+    Update question-or-bug-report.md
+
+[33mcommit 47f8d4590da9c9dbdf4c50ce925c7ab25b1de9b3[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Wed Oct 17 17:42:18 2018 -0700
+
+    Update question-or-bug-report.md
+
+[33mcommit c6727601b69e6109290fd6e5a137b5322f108bc7[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Wed Oct 17 17:30:10 2018 -0700
+
+    Update question-or-bug-report.md
+
+[33mcommit de8ac0c01641d02fb3145ab76798e77a2b09e3b0[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Wed Oct 17 17:29:05 2018 -0700
+
+    Update question-or-bug-report.md
+
+[33mcommit b3750a97b69f231ca75c03ed2a60ee8839f9eed5[m
+Merge: 0dda484 d4d5caa
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Tue Oct 16 09:18:27 2018 -0700
+
+    Merge pull request #2468 from livedota/patch-1
+    
+    Update version
+
+[33mcommit 0dda4848f82ab9fe8aecc27f2f349c2a8efe0f1a[m
+Merge: 05c30e6 be8b94e
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Tue Oct 16 09:09:34 2018 -0700
+
+    Merge pull request #2471 from chadevans/viewport-fit-ios11-1
+    
+    viewport-fit=cover support for iOS 11.0 and 11.1
+
+[33mcommit be8b94ef4140d6135dd2e19ce4bbebd44d5413dd[m
+Author: Chad Evans <cevans@biltmore.com>
+Date:   Tue Oct 16 11:24:16 2018 -0400
+
+    add constant for early iOS 11 support
+
+[33mcommit ccd6711b7927530ea409bf62d45168fd775b5082[m
+Author: supa-creation.com <contact@supa-creation.com>
+Date:   Tue Oct 16 11:51:16 2018 +0200
+
+    Fix crash for POI click with line break in name
+
+[33mcommit d4d5caa0621cae6958cd6ade6fbaeb3532c6e84d[m
+Author: livedota <15877216+livedota@users.noreply.github.com>
+Date:   Tue Oct 16 09:23:27 2018 +0200
+
+    Update README.md
+
+[33mcommit 05c30e626eab4e7dc24e37e60c84ebcc8d550e34[m
+Merge: 9d494a4 fc8c6af
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Mon Oct 15 12:18:39 2018 -0700
+
+    Merge pull request #2466 from supa-creation/master
+    
+    Fix crash for POI with quote in name
+
+[33mcommit fc8c6afd658c057ae3433d5d4b9c4732600c02c5[m
+Author: supa-creation.com <contact@supa-creation.com>
+Date:   Mon Oct 15 21:15:28 2018 +0200
+
+    Fix crash for POI with quote in name
+
+[33mcommit 9d494a4c817a2aecf338956b07c9309743d680f1[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Sun Oct 7 19:28:41 2018 -0700
+
+    Update README.md
+
+[33mcommit 293815d811f3bfe8febd95287cf1a6d23b665846[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 25 13:59:16 2018 -0700
+
+    v2.4.6
+
+[33mcommit c20038c0f7ce71fd258c7e4bad0663bd2eea7066[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 25 13:31:16 2018 -0700
+
+    Uninstall `com.googlemaps.ios` plugin automatically
+
+[33mcommit a726be488ac5555efc4be2f2f97685c03b80e68a[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 25 13:00:19 2018 -0700
+
+    Prepare for v2.4.5
+
+[33mcommit f33cf1d0fc1f7e285fd7510b63f9e7a98f0c60cf[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Tue Sep 25 12:28:28 2018 -0700
+
+    Use CocoaPod instead of Github installation
+
+[33mcommit 8b6f58db056cc8a51b691a7dfd8b65a6d1647f13[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Sun Sep 23 22:19:12 2018 -0700
+
+    update README.md
+
+[33mcommit c7c27bf722eae4baea01dcc826c97486a430668e[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Sun Sep 23 19:42:15 2018 -0700
+
+    (Browser) fix: GeocoderResult.extra.lines filed is incorrect parent https://github.com/ionic-team/ionic-native-google-maps/issues/84
+
+[33mcommit 0316618fd2712427e4163b0555d41869cc3ac66a[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Sat Sep 22 17:13:50 2018 -0700
+
+    Update BaseClass.js
+    
+    Fix: https://github.com/ionic-team/ionic-native-google-maps/issues/83
+
+[33mcommit 9fbf72c47f33a46afad72f0807953932f5cc765a[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Fri Sep 21 12:22:23 2018 -0700
+
+    (Browser/iOS/Android) prevent null pointer error  #2431
+    
+    As far as I know, this occurs when you use marker cluster rarely.
+
+[33mcommit 5b97c319b960d4f60240f1151dc03b5cb39f0e7b[m
+Merge: 426a17c feba17a
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Fri Sep 21 12:18:40 2018 -0700
+
+    Merge branch 'master' into multiple_maps
+
+[33mcommit feba17a3bb269a04637f86db037c3a30055ae730[m
+Merge: 3e88799 bfb1813
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Fri Sep 21 12:15:22 2018 -0700
+
+    Merge pull request #2432 from chadevans/viewport-fit
+    
+    Feature test for viewport-fit=cover
+
+[33mcommit bfb18137d08f050232854a162b6144e3eac2fd5e[m
+Author: Chad Evans <cevans@biltmore.com>
+Date:   Fri Sep 21 14:35:12 2018 -0400
+
+    replace iOS userAgent test with browser feature test
+
+[33mcommit 426a17cfb73655412c1cbf9009f74603a1ba85fe[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 19 22:54:48 2018 -0700
+
+    Fix:  "/polyfills/promise-7.0.4.min.js.map" is not found
+
+[33mcommit 3e8879984d9224d4803d9655a1232c3deea174b3[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 18 17:30:57 2018 -0700
+
+    v2.4.4
+
+[33mcommit 2dea19002d541863126e5f6e941fb5bbc1959ba9[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 18 17:26:39 2018 -0700
+
+    v2.4.4
+
+[33mcommit b1dfa1bc2e615bbb5f9a476deb5b2fdd91b6db9a[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 18 17:24:29 2018 -0700
+
+    comment out debug code
+
+[33mcommit 762480e3820c2051f0fcf761449d160064949c9c[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 18 13:26:45 2018 -0700
+
+    - Add experimental code (but commented out)
+    - Use github tarball url instead of git (#2425)
+
+[33mcommit a248a1366d1d80873cccdd4a2203a7275a6f98cc[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Mon Sep 17 16:02:51 2018 -0700
+
+    Update: (Android) `getMyLocation()` does not return if application has been launched when location is disabled, then enable the location after soon.
+
+[33mcommit 6996dc8b2f38e0979fcce504e242901b260b08e9[m
+Merge: 2fbad88 f92c798
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Mon Sep 17 14:38:30 2018 -0700
+
+    Merge pull request #2422 from thes3m/master
+    
+    (iOS) Fixed issue where plugin could appear behind other plugins
+
+[33mcommit 2fbad88268a9270e9e787c8a071d9ea230b52244[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Mon Sep 17 10:13:09 2018 -0700
+
+    (Android) update: check if style has specified property
+
+[33mcommit 0e5f4d9b2c716da93605d6fb619951735cf3adff[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Mon Sep 17 10:04:42 2018 -0700
+
+    (Android/iOS) Fix: execute `map.animateCamera()` while the map view is detached causes dead lock
+
+[33mcommit f92c798401148adc5b43f1f302e1dcae926d9dd2[m
+Author: Samo Pajk <samo.pajk@razum.si>
+Date:   Fri Sep 14 09:56:08 2018 +0200
+
+    (iOS) Fixed issue where plugin could appear behind other plugins
+
+[33mcommit 2cb5306d9b8f6aa31abb1575a7b331fc4af32802[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 18:10:09 2018 -0700
+
+    update
+
+[33mcommit e4ad15c9b8eee962272e3cb3bcc551cd30b82d83[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 17:08:42 2018 -0700
+
+    (Browser) Fix: street view panorama hides other existing elements
+
+[33mcommit a60756c3bb7d551b7e8c948bfbed087c329f8075[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 17:05:39 2018 -0700
+
+    (Browser) Fix: panorama.setPov() does not work if both pitch and heading are not specified
+
+[33mcommit ffb9d6b3309c3cc3aa4fe2da0b25683e2dc714ff[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 17:01:00 2018 -0700
+
+    (Browser) Fix: PluginStreetViewPanorama.js is incomplete
+
+[33mcommit 88c4f5dc6810376cdedac74e8bf70b5767771e76[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 15:06:26 2018 -0700
+
+    (Browser) fix: `plugin.google.maps.StreetView.Source` is undefined
+
+[33mcommit b37c24fa647925cfde10fe701fd48509ef2bc0be[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 14:59:41 2018 -0700
+
+    (Browser) Fix: TileOverlay.remove() is not implemented
+
+[33mcommit 4129b4ca1dc82fabf761ae205fa5e59498b26676[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 14:59:18 2018 -0700
+
+    (Browser) update: change the code of fade-in process of TileOverlay
+
+[33mcommit b48b8058ba13f9828e6fbe5bf65992746a997109[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 14:39:06 2018 -0700
+
+    (Browser) Fix: tileOverlay.setOpacity() is not implemented.
+
+[33mcommit 2a3258d5ccd2457bf30a08e0a7dbedb51138e44e[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 14:27:45 2018 -0700
+
+    (Browser) fix: TileOverlay does not work if fadeIn = false
+
+[33mcommit 4b82b577c2ca0f9c3014398c41e14440d0fade86[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 14:20:46 2018 -0700
+
+    (Browser) Fix: GROUND_OVERLAY_CLICK returns incorrect LatLng type
+
+[33mcommit a4342ab8b8024b54ab4309947c8bb92c14da24bc[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 13:29:50 2018 -0700
+
+    (Browser) Fix: GroundOverlay.remove() does not work
+
+[33mcommit 1ed9eabf369938dea6d507b80698d6d188baedbb[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 13:06:21 2018 -0700
+
+    (Browser) Fix: circle.setCenter() does not work
+
+[33mcommit 70f464bfb3f440609d8e375f26445aa25b11dd67[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 13:01:03 2018 -0700
+
+    (Browser) Fix: the methods manipulate hole property do not work correctly
+
+[33mcommit 8683de7cd92a6baa3f8b2bbfee05b96629565755[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Sep 13 12:03:28 2018 -0700
+
+    (Browser) Fix: Null pointer error in PluginMarker.js
+    (Browser) Fix: ClusterIcon anchor is incorrect.
+
+[33mcommit 546a6ab4b9fe97c729ea64e2bf73ee9e29b72ed5[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 19:07:19 2018 -0700
+
+    (Browser) fix: little memory leak
+
+[33mcommit 4a82b045ed8c342c7d0b3ccc78aca68b0256844b[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 18:42:02 2018 -0700
+
+    (Browser) fix: MarkerCluster draws incorrect clusters
+
+[33mcommit c78ba8dca6265ecfde94e3b8a9cdc902f0f71a1a[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 16:43:12 2018 -0700
+
+    (Browser) Fix: convert iconOptions.anchor to google.maps.Point
+
+[33mcommit 0dbb69769a9235979a6a8ee18259d4bdf5cf3e21[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 16:15:32 2018 -0700
+
+    (Browser) update: Change the default marker icon design
+
+[33mcommit ac2c7acad520120f7f5284ffb3ffce21f3fbc876[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 15:58:15 2018 -0700
+
+    (Browser)Fix: marker.setInfoWindowAnchor is incorrect
+
+[33mcommit 07a247ce29a151842701174855b392cfca96d00d[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 15:17:33 2018 -0700
+
+    (Browser) Fix: MarkerOptions.zIndex does not work
+
+[33mcommit 56916c3d5b63276bd4df1ac2cdaa379fd3d4c5d1[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 15:07:16 2018 -0700
+
+    (Browser) Fix: MARKER_EVENTS does not work
+
+[33mcommit 70744a5cefb4ba1347bc3a2a1cdbd44dabe8e8a6[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 14:27:31 2018 -0700
+
+    (Browser) Fix: map.setOptions() does not work
+
+[33mcommit da06f3ea91fb512f6e811f0dc602bbb04a11c51c[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 12:23:59 2018 -0700
+
+    (Browser) Fix: `stokeColor` is undefined error
+
+[33mcommit 2b469f4e84626da49fcec42518ad75f16e10a417[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Wed Sep 12 12:10:24 2018 -0700
+
+    (Browser) Fix: Polygon.holes property has not implemented
+
+[33mcommit c9f58ff91d40d003379c429e13e27e5fc3be368e[m
+Merge: 98f16cf 9c2b16e
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 11 19:26:51 2018 -0700
+
+    v2.4.3
+
+[33mcommit 98f16cf40b6d879d5d94605dd99be86375fab010[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 11 19:14:56 2018 -0700
+
+    Prepare fore v2.4.3
+
+[33mcommit af484b7c856841590b6a9a110c1d8a5ad425fc6c[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 11 19:12:04 2018 -0700
+
+    (iOS) Fix: anchor property of GroundOverlay is not implemented
+
+[33mcommit 5af9178753f9bb9daa134d68b1fce75c2458b508[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 11 17:41:13 2018 -0700
+
+    (Browser) Implement the gestureBounds property for browser platform
+
+[33mcommit 0787e2b18c0849c467117a15bba9b13c5d082948[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Tue Sep 11 17:38:38 2018 -0700
+
+    (Browser) Fix: little memory leak
+
+[33mcommit b5aae1018076e8d4cf8000586685f7d55f5eeb72[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Mon Sep 10 19:53:56 2018 -0700
+
+    Implement `preferences.gestureBounds` option
+
+[33mcommit c276dad2a873d76ecb24a110b961e56a9be2d438[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Sat Sep 8 14:04:22 2018 -0700
+
+    (Browser) Fix: map.setCameraTarget() implementation is wrong #2416
+
+[33mcommit c845c4105d8734b49b3fdc84d50a011de1dc9cfc[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Fri Sep 7 12:16:05 2018 -0700
+
+    (android) Specify default anchor position of GroundOverlay
+
+[33mcommit e2eaa22a65d3189c37ca61596e8466710440d2d8[m
+Merge: fa24db4 654dd71
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Tue Sep 4 17:32:59 2018 -0700
+
+    Merge pull request #2411 from KiwiKilian/multiple_maps
+    
+    Fix bottom area clickable #2409
+
+[33mcommit 654dd71fd703bf2b0fd8e59a22bf2fc33e7650c2[m
+Author: Masashi Katsumata <wf9a5m75@gmail.com>
+Date:   Tue Sep 4 17:02:09 2018 -0700
+
+    Update MyPluginLayer.m
+    
+    Avoid creating instance in a loop as much as possible.
+
+[33mcommit 90ab3f91ff89247a5ad87d62347b5aa13fe3fb73[m
+Author: Kilian Finger <kilianfinger@gmail.com>
+Date:   Sun Sep 2 18:43:57 2018 +0200
+
+    Fix bottom area clickable #2409
+
+[33mcommit fa24db401553e781d68c5f6836896d1dd6d679fa[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Sat Sep 1 23:36:16 2018 -0700
+
+    Fix: can not load KML file from http://localhost on ionic 3 #2410
+
+[33mcommit 80af1dbd5c16b3c02299d55575347ab63b5a9998[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Fri Aug 31 14:09:32 2018 -0700
+
+    Fix: HTMLInfoWindow displays unnecessary scroll bars
+
+[33mcommit 9c2b16ef249e90e59cc62895b0aacd97112bd8dc[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Fri Aug 31 11:00:58 2018 -0700
+
+    v2.4.2
+
+[33mcommit a36f1169767b68acdbdd8f7f7fc0fda763bb0612[m
+Merge: 04e9c8e 8cf4f9b
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Aug 30 18:05:53 2018 -0700
+
+    Merge commit '8cf4f9b2b0f9dba018b6f4244743f56d6dc2ed02' into multiple_maps
+
+[33mcommit 04e9c8e166735d2480b135645723f98f64b68993[m
+Author: wf9a5m75 <wf9a5m75@gmail.com>
+Date:   Thu Aug 30 12:36:35 2018 -0700
+
+    update: README.md
